@@ -7,8 +7,6 @@
   "keywords": ["TYPO3 CMS"],
   "version": "1.0.0",
   "require": {
-    "typo3/cms": "^9.5",
-    "solarium/solarium": "^4.0"
   },
   "autoload": {
   }
