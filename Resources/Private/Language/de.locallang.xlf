@@ -1,10 +1,26 @@
 <xliff version="1.0" xmlns:t3="http://typo3.org/schemas/xliff">
-    <file source-language="en" target-language="de" datatype="plaintext" original="messages" date="2011-10-18T18:20:51Z" product-name="presentation_package">
+    <file source-language="en" target-language="de" datatype="plaintext" original="messages" date="2023-06-15T18:20:51Z" product-name="presentation_package">
         <header/>
         <body>
-            <trans-unit id="more" xml:space="preserve">
+            <trans-unit id="ulb-more" xml:space="preserve">
                 <source>more</source>
                 <target>mehr erfahren</target>
+            </trans-unit>
+            <trans-unit id="ulb-detail-search" xml:space="preserve">
+                <source>refine search</source>
+                <target>Suche verfeinern</target>
+            </trans-unit>
+            <trans-unit id="ulb-indexOfContents" xml:space="preserve">
+                <source>Index of contects</source>
+                <target>Inhaltsverzeichnis</target>
+            </trans-unit>
+            <trans-unit id="ulb-hits" xml:space="preserve">
+                <source>Result list</source>
+                <target>Trefferliste</target>
+            </trans-unit>
+            <trans-unit id="ulb-startpage" xml:space="preserve">
+                <source>Startpage</source>
+                <target>Startseite</target>
             </trans-unit>
         </body>
     </file>

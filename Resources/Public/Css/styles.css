@@ -706,7 +706,7 @@ listview
     padding: 15px 0;
 }
 
-.listview-headline-sort .tx-dlf-collection-description p {
+.listview-headline-sort .tx-dlf-collection-description .tx-dlf-collection-description-list p {
     margin: 0 0 15px 0;
 }
 
@@ -2679,7 +2679,7 @@ dd.tx-dlf-title a {
     display: inline-block;
 }
 
-.tx-dlf-collection .tx-dlf-collection-description p.long {
+.tx-dlf-collection .tx-dlf-collection-description .tx-dlf-collection-descriptio-list p.long {
     display: none;
 }
 

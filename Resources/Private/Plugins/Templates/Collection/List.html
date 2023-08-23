@@ -39,16 +39,15 @@
                         </span>
                     </f:if>
 
-                    <span class="tx-dlf-collection-description shorten-text-4">
+                    <span class="tx-dlf-collection-description-list shorten-text-4">
                         <f:format.html>{item.collection.description}</f:format.html>
                     </span>
                     <span class="tx-dlf-collection-counts">
                         ({item.info.titles -> f:count()}
                         <f:translate key="{f:if(condition:'{item.info.titles -> f:count()} > 1', then: 'titles', else: 'title')}" />)
-                        <f:comment>/
+                        /
                         {item.info.volumes -> f:count()}
                         <f:translate key="{f:if(condition:'{item.info.volumes -> f:count()} > 1', then: 'volumes', else: 'volume')}" />
-                        </f:comment>
                     </span>
                     <span class="collection-link">
                         Ergebnisse anzeigen

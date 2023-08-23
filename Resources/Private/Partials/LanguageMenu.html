@@ -1,9 +1,9 @@
-<div class="navbar-start" style="display: none;">
+<div class="navbar-start" /*style="display: none;" */>
     <v:page.languageMenu  tagName="ul" tagNameChildren="li" defaultLanguageLabel="Deutsch" hideNotTranslated="1" layout="flag,name">
         <f:for each="{languageMenu}" as="item">
             <f:if condition="!{item.current}">
                 <f:then>
-                    <a class="navbar-item" href="{item.url}">
+                    <a class="navbar-item" style="color: #fff;" href="{item.url}">
                         {item.label}
                     </a>
                 </f:then>

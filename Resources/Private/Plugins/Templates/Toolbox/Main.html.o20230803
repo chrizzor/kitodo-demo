@@ -23,12 +23,6 @@
     <li>
         <a id="fullPdfDownload" title="PDF Download" href="#"><img src="/typo3conf/ext/presentation_package/Resources/Public/Images/icon-pdf-white.svg" alt="PDF Download"></a>
     </li>
-<!-- AVI 20230803 for copy PURL (directlink) into User-buffer -->
-<f:comment>
-    <li>
-        <a class="copyDirectLink2Buffer" id="copyDirectLink2Buffer" title="copyDirectLink2Buffer" href="#"><img src="/typo3conf/ext/presentation_package/Resources/Public/Images/icon-pdf-white.svg" alt="copyDirectLink2Buffer"></a>
-    </li>
-</f:comment>
 
     <f:if condition="{annotationtool}">
         <f:then>

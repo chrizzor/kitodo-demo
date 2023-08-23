@@ -30,7 +30,7 @@
             <f:if condition="{viewData.requestData.double}">
                 <f:then>
                     <li class="tx-dlf-navigation-double">
-                        <f:link.action addQueryString="1" additionalParams="{'tx_dlf[double]':'0'}">
+                        <f:link.action title="{f:translate(key: 'doublePageOff')}" addQueryString="1" additionalParams="{'tx_dlf[double]':'0'}">
                             <img src="/typo3conf/ext/presentation_package/Resources/Public/Images/icon-doublepage.svg" alt="{f:translate(key: 'doublePageOn')}">
                         </f:link.action>
                     </li>
@@ -53,7 +53,7 @@
                 </f:then>
                 <f:else>
                     <li class="tx-dlf-navigation-double">
-                        <f:link.action addQueryString="1" additionalParams="{'tx_dlf[double]':'1'}">
+                        <f:link.action title="{f:translate(key: 'doublePageOn')}" addQueryString="1" additionalParams="{'tx_dlf[double]':'1'}">
                             <img src="/typo3conf/ext/presentation_package/Resources/Public/Images/icon-doublepage.svg" alt="{f:translate(key: 'doublePageOn')}">
                         </f:link.action>
                     </li>
@@ -108,13 +108,13 @@
     <li class="tx-dlf-navigation-prev">
         <f:if condition="{viewData.requestData.page} > {viewData.requestData.double + 1}">
             <f:then>
-                <f:link.action addQueryString="1" additionalParams="{'tx_dlf[page]':'{viewData.requestData.page - 1 - viewData.requestData.double}'}">
-                    <img src="/typo3conf/ext/presentation_package/Resources/Public/Images/icon-shlb-arrow-left-w.svg" alt="{f:translate(key: 'prevPage'}')}">
+                <f:link.action title="{f:translate(key: 'prevPage')}" addQueryString="1" additionalParams="{'tx_dlf[page]':'{viewData.requestData.page - 1 - viewData.requestData.double}'}">
+                    <img src="/typo3conf/ext/presentation_package/Resources/Public/Images/icon-shlb-arrow-left-w.svg" alt="{f:translate(key: 'prevPage')}">
                 </f:link.action>
             </f:then>
             <f:else>
                 <span title="{f:translate(key: 'prevPage')}">
-                    <img src="/typo3conf/ext/presentation_package/Resources/Public/Images/icon-shlb-arrow-left-w.svg" alt="{f:translate(key: 'prevPage'}')}">
+                    <img src="/typo3conf/ext/presentation_package/Resources/Public/Images/icon-shlb-arrow-left-w.svg" alt="{f:translate(key: 'prevPage')}">
                 </span>
             </f:else>
         </f:if>
@@ -150,7 +150,7 @@
     <li class="tx-dlf-navigation-next">
         <f:if condition="{viewData.requestData.page + viewData.requestData.double} < {numPages}">
             <f:then>
-                <f:link.action addQueryString="1" additionalParams="{'tx_dlf[page]':'{viewData.requestData.page + 1 + viewData.requestData.double}'}">
+                <f:link.action title="{f:translate(key: 'nextPage')}" addQueryString="1" additionalParams="{'tx_dlf[page]':'{viewData.requestData.page + 1 + viewData.requestData.double}'}">
                     <img src="/typo3conf/ext/presentation_package/Resources/Public/Images/icon-shlb-arrow-right-w.svg" alt="{f:translate(key: 'nextPage')}">
                 </f:link.action>
             </f:then>

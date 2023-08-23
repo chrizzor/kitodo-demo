@@ -3,8 +3,20 @@
     <file source-language="en" datatype="plaintext" original="messages" date="2011-10-18T18:20:51Z" product-name="presentation_package">
         <header/>
         <body>
-            <trans-unit id="more" xml:space="preserve">
+            <trans-unit id="ulb-more" xml:space="preserve">
                 <source>more</source>
+            </trans-unit>
+            <trans-unit id="ulb-detail-search" xml:space="preserve">
+                <source>refine search</source>
+            </trans-unit>
+            <trans-unit id="ulb-indexOfContents" xml:space="preserve">
+                <source>Index of contects</source>
+            </trans-unit>
+            <trans-unit id="ulb-hits" xml:space="preserve">
+                <source>Result list</source>
+            </trans-unit>
+            <trans-unit id="ulb-startpage" xml:space="preserve">
+                <source>Startpage</source>
             </trans-unit>
         </body>
     </file>

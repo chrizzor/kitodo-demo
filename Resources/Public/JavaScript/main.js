@@ -246,7 +246,37 @@ $(document).ready(function() {
     metdataLinkReplacement();
     linkButtonToPdfGeneration();
     pageGridToggle();
+    // AVI 20230803 for copy PURL (directlink) into User-buffer 
+    copyDirectlink2Buffer();
 });
+
+
+function copyDirectlink2Buffer() {
+	//AVI 20230803 for copy PURL (directlink) into User-buffer 
+    $('.copyDirectLink2Buffer').on("click", function (event) {
+        event.preventDefault();
+	// Text, der kopiert werden soll, die Frage ich, wie bekommt man metadata-values->PURL hier rein...da alle metadata-feld nicht zu unterscheiden sind. ggf. direct von XML wieder? 
+        var text = "copy Text.";
+
+        // Erstelle ein unsichtbares Textfeld
+        var textfeld = document.createElement("textarea");
+        textfeld.value = text;
+        document.body.appendChild(textfeld);
+
+        // Kopiere den Text aus dem Textfeld
+        textfeld.select();
+        textfeld.setSelectionRange(0, 99999); // For mobile devices
+        navigator.clipboard.writeText(textfeld.value);
+
+
+        // Entferne das Textfeld
+        document.body.removeChild(textfeld);
+
+        // Gib eine Bestätigungsmeldung aus
+       alert("test: " + textfeld.value)
+    });
+
+}
 
 function shortenDescription() {
     // all short descriptions
@@ -259,6 +289,9 @@ function shortenDescription() {
     // });
     $('.tx-dlf-collection-description').each(function() {
        shortenText($(this));
+    });
+    $('.tx-dlf-collection-description-list').each(function() {
+       shortenListText($(this));
     });
     showMoreClickHandler();
 }
@@ -283,6 +316,14 @@ function shortenText(element) {
         $('<p><a href="#" class="description-show-more">mehr...</a></p>').insertAfter($(element));
     }
 
+}
+
+function shortenListText(element) {
+    if ($(element).text().length > 100) {
+        $(element).text($(element).text().substr(0,97) + "...") ;
+	    // text.slice(0, count) + ((text.length > count) ? "..." : "");
+    }
+    
 }
 
 function initialFacetValueRestriction() {
