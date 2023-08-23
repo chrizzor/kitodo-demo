@@ -18,6 +18,9 @@
             <trans-unit id="ulb-startpage" xml:space="preserve">
                 <source>Startpage</source>
             </trans-unit>
+            <trans-unit id="ulb-notitle" xml:space="preserve">
+                <source>No title</source>
+            </trans-unit>
         </body>
     </file>
 </xliff>

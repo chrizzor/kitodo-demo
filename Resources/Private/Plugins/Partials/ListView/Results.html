@@ -33,7 +33,14 @@
                                         additionalParams="{tx_dlf:{page:'{document.page}', double:'0', id:'{document.uid}', pagegrid:'0'}}"
                                         class=""
                                         title="{docTitle}">
-                                    {docTitle}
+                                    <f:if condition="{docTitle}">
+                                        <f:then>
+                                            {docTitle}
+                                        </f:then>
+                                        <f:else>
+                                            [<f:translate key="LLL:EXT:presentation_package/Resources/Private/Language/locallang.xlf:ulb-notitle"/>]
+                                        </f:else>
+                                    </f:if>
                                 </f:link.page>
                             </h2>
                             <f:if condition="{document.metadata}">
