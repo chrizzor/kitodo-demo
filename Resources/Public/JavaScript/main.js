@@ -374,6 +374,12 @@ function setBackToListviewInBreadcrumb() {
 function addLicenseIcon() {
     if ($('.license-url ul li').length > 0) {
         var link = $('.license-url ul li').text();
+        if (link === 'CC0 1.0' )          { link = 'https://creativecommons.org/publicdomain/zero/1.0/'; }
+        if (link === 'CC BY 4.0' )        { link = 'https://creativecommons.org/licenses/by/4.0/'; }
+        if (link === 'CC BY-SA 4.0' )     { link = 'https://creativecommons.org/licenses/by-sa/4.0/'; }
+        if (link === 'CC BY-ND 4.0' )     { link = 'https://creativecommons.org/licenses/by-nd/4.0/'; }
+        if (link === 'CC BY-NC-SA 4.0' )  { link = 'https://creativecommons.org/licenses/by-nc-sa/4.0/'; }
+        if (link === 'CC BY-NC-ND 4.0' )  { link = 'https://creativecommons.org/licenses/by-nc-nd/4.0/'; }
         var res = link.split("/");
 
         // remove empty strings
