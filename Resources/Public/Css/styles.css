@@ -2337,6 +2337,14 @@ ul.tx-dlf-toolbox span a img {
     padding: 5px 5px;
 }
 
+.tx-dlf-toc .dropdown-menu input[type=checkbox]:checked ~ ul ul {
+    padding-left: 25px
+}
+
+.tx-dlf-toc .tx-dlf-toc-cur {
+    background-color: white;
+}
+
 .tx-dlf-toolsPdf span {
     border-top: 1px solid #d8d8d8;
     display: block;
