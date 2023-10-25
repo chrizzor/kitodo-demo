@@ -256,7 +256,7 @@ function copyDirectlink2Buffer() {
     $('.copyDirectLink2Buffer').on("click", function (event) {
         event.preventDefault();
 	// Text, der kopiert werden soll, die Frage ich, wie bekommt man metadata-values->PURL hier rein...da alle metadata-feld nicht zu unterscheiden sind. ggf. direct von XML wieder? 
-        var text = "copy Text.";
+        var text = $('#purl-link a').attr('href');
 
         // Erstelle ein unsichtbares Textfeld
         var textfeld = document.createElement("textarea");
