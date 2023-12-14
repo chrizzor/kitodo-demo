@@ -131,7 +131,12 @@
                 <f:form.hidden property="recordId" value="{viewData.requestData.recordId}"/>
             </f:if>
             <f:if condition="{viewData.requestData.double}">
-                <f:form.hidden property="double" value="{viewData.requestData.double}"/>
+                <f:then>
+                    <f:form.hidden property="double" value="{viewData.requestData.double}"/>
+                </f:then>
+                <f:else>
+                    <f:form.hidden property="double" value="0"/>
+                </f:else>
             </f:if>
             <label for="tx-dlf-page-{viewData.uniqueId}">
                 <f:translate key="selectPage"/>
