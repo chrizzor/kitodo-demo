@@ -53,20 +53,20 @@
                         <f:then>
                             <f:link.external uri="{imageDownload.0.url}">
                                 <f:comment><f:translate key="downloadSinglePage" /> {imageDownload.0.mimetypeLabel}</f:comment>
-                                <img src="/typo3conf/ext/presentation_package/Resources/Public/Images/icon-pdf-white.svg" alt="PDF Download">
+                                <img src="/typo3conf/ext/presentation_package/Resources/Public/Images/filetype-jpg.svg" alt="Image Download">
                             </f:link.external>
                         </f:then>
                         <f:else>
                             <f:link.external uri="{imageDownload.0.url}">
                                 <f:comment><f:translate key="downloadLeftPage" /> {imageDownload.0.mimetypeLabel}</f:comment>
-                                <img src="/typo3conf/ext/presentation_package/Resources/Public/Images/icon-pdf-white.svg" alt="PDF Download">
+                                <img src="/typo3conf/ext/presentation_package/Resources/Public/Images/filetype-jpg.svg" alt="Image Download">
                             </f:link.external>
                             <f:if condition="{imageDownload.1}">
                                 <f:then>
                                     <span class="tx-dlf-tools-imagedownload">
                                         <f:link.external uri="{imageDownload.1.url}">
                                             <f:comment><f:translate key="downloadRightPage" /> {imageDownload.1.mimetypeLabel}</f:comment>
-                                            <img src="/typo3conf/ext/presentation_package/Resources/Public/Images/icon-pdf-white.svg" alt="PDF Download">
+                                            <img src="/typo3conf/ext/presentation_package/Resources/Public/Images/filetype-jpg.svg" alt="Image Download">
                                         </f:link.external>
                                     </span>
                                 </f:then>

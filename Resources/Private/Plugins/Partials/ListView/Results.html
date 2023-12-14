@@ -23,7 +23,13 @@
                     <section class="shlb-listview-item">
                         <article class="shlb-listview-img">
                             <f:if condition="{document.thumbnail}">
-                                <img src="{document.thumbnail}" alt="Vorschaubild von {docTitle}" loading="lazy"/>
+                                <f:link.page
+                                        pageUid="{settings.targetPidPageView}"
+                                        additionalParams="{tx_dlf:{page:'{document.page}', double:'0', id:'{document.uid}', pagegrid:'0'}}"
+                                        class=""
+                                        title="{docTitle}">
+                                    <img src="{document.thumbnail}" alt="Vorschaubild von {docTitle}" loading="lazy"/>
+                                </f:link.page>
                             </f:if>
                         </article>
                         <article class="shlb-listview-text">
