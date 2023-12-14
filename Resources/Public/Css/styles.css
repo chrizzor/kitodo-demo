@@ -798,6 +798,10 @@ ol.tx-dlf-listview-list {
 detail-view
 ----------------------------------------------------------------------*/
 
+#tx-dlf-map {
+    height: calc(100vh - 270px);
+}
+
 #detail-view {
     background-color: #fff;
     webkit-box-shadow: 0px 3px 0px 0px rgba(0,0,0,0.2);
@@ -1179,11 +1183,6 @@ detail-view
 
 .fullsize-pagegrid .tx-dlf-pagegrid-cur .tx-dlf-pagegrid-thumbnail img {
     border: 3px solid #003064;
-}
-
-.ol-unselectable.ol-layers {
-    overflow: hidden;
-    width: 75% !important;
 }
 
 dd.tx-dlf-metadata-title.detail-view-title-main {
