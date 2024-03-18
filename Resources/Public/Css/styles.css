@@ -1352,6 +1352,254 @@ table.month h4:hover {
     display: block;
 }
 
+.tx-dlf-newspaper-years .year-view ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-gap: 30px;
+    list-style-type: none;
+}
+
+.tx-dlf-newspaper-calendar .list-view,.tx-dlf-basket-list {
+    background-color: #fff;
+    box-shadow: 0 0 0 1px #eee;
+    padding: 20px;
+}
+
+.tx-dlf-calendar .meta-header,.tx-dlf-calendar-years .meta-header {
+    background-color: #6e6e6e;
+    border-radius: 3px;
+    webkit-box-shadow: 0px 3px 0px 0px rgba(0,0,0,0.2);
+    box-shadow: 0px 3px 0px 0px rgba(0,0,0,0.2);
+    margin: 0 15px;
+    display: table;
+    width: calc(100% - 30px);
+}
+
+.calendar-view,
+.tx-dlf-calendar-years .year-view li {
+    position: relative;
+    padding: 20px;
+    margin: 30px 30px 0 0;
+    text-align: center;
+    background: #2b395a;
+    color: #fff;
+    -webkit-transition: all 0.1s ease-in-out;
+    -moz-transition: all 0.1s ease-in-out;
+    transition: all 0.1s ease-in-out;
+}
+
+.tx-dlf-calendar-years .year-view li {
+    width: calc(33.33%);
+}
+
+.calendar-view:hover {
+    background: #242424;
+    box-shadow: 0px 0px 30px 0px rgba(0,0,0,0.75);
+}
+
+table.month {
+    width: 100%;
+    border-spacing: 0;
+}
+
+table.month caption {
+    padding-bottom: 15px;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 30px;
+}
+
+table.month tr:first-child {
+    width: 100%;
+}
+
+table.month th {
+    padding: 5px 0;
+}
+
+table.month td {
+    padding: 2px;
+    color: #999;
+}
+
+table.month h4 {
+    border: 1px solid transparent;
+    border-radius: 3px;
+    font-size: 16px;
+    font-weight: 700;
+    color: #c83141;
+    cursor: pointer;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+table.month h4:hover {
+    color: #fff;
+    border: 1px solid #F2FBFF;
+}
+
+.year-anchor {
+    display: table-cell;
+    padding: 30px;
+    vertical-align: middle;
+}
+
+.tx-dlf-calendar .meta-header .year,.tx-dlf-calendar .meta-header .meta-hint-year,.tx-dlf-calendar-years .meta-hint-year {
+    padding-top: 5px;
+    color: #999;
+}
+
+.calendar-list-selection {
+    display: table-cell;
+    text-align: right;
+    padding: 30px 0 0 0;
+    vertical-align: middle;
+}
+
+.calendar-list-selection a {
+    background: #e4e4e4;
+    border-radius: 3px;
+    display: inline-block;
+    padding: 10px;
+    margin: 2px;
+    min-width: 20px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.calendar-list-selection a:hover {
+    background: #252525;
+    color: #fff;
+}
+
+.tx-dlf-calendar,.tx-dlf-calendar-years {
+    background: #ffffff;
+    padding: 60px 30px;
+}
+
+.tx-dlf-calendar .list-view {
+    background-color: #242424;
+    color: #fff;
+}
+
+.tx-dlf-calendar .list-view li {
+    border-top: 1px solid #fff;
+    background: #444;
+    padding: 15px 15px;
+    list-style-type: none;
+    -webkit-transition: all 0.1s ease-in-out;
+    -moz-transition: all 0.1s ease-in-out;
+    transition: all 0.1s ease-in-out;
+}
+
+.tx-dlf-calendar .list-view li:hover {
+    background: #242424;
+    box-shadow: 0px 0px 30px 0px rgba(0,0,0,0.75);
+}
+
+.allyears {
+    padding: 15px;
+}
+
+.calendar-list-selection {
+    padding: 15px;
+}
+
+.tx-dlf-calendar .list-view li:first-child {
+    border-top: 0;
+}
+
+.tx-dlf-calendar-years .year-view ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 30px;
+    list-style-type: none;
+}
+
+.year-view {
+    padding: 15px;
+}
+
+.tx-dlf-calendar-years .year-anchor a,.tx-dlf-calendar-years .meta-hint-year {
+    color: #fff;
+}
+
+.tx-dlf-calendar-years .year-view li a,.tx-dlf-calendar .list-view a {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 30px;
+    color: #fff;
+    padding: 5px;
+    margin: -5px;
+    text-decoration: none;
+}
+
+.tx-dlf-calendar .list-view a {
+    display: inline-block;
+    margin-left: 5px;
+}
+
+.tx-dlf-calendar-years .year-view li a:hover,.tx-dlf-calendar .list-view a:hover {
+    color: #242424;
+    background: #fff;
+    border-radius: 3px;
+}
+
+.calendar-description h2 a,.calendar-description p a {
+    color: #FFF;
+}
+
+article.calendar-metadata {
+    display: inline-block;
+    width: 41%;
+    margin: 0;
+}
+
+article.calendar-metadata ul li dl {
+    padding: 10px;
+}
+
+.dropdown-menu ul li .tx-dlf-icon-cur a {
+    background: url('../../../typo3conf/ext/presentation_package/typo3conf/ext/presentation_package/Resources/Public/img/icon-delete-dark.svg') 10px center no-repeat;
+    background-size: 16px 16px;
+    padding: 8px 15px 8px 35px;
+}
+
+.dropdown-menu ul li .tx-dlf-icon-cur a:hover {
+    background: url('../../../typo3conf/ext/presentation_package/typo3conf/ext/presentation_package/Resources/Public/img/icon-delete.svg') 10px center no-repeat #242424;
+    background-size: 16px 16px;
+    padding: 8px 15px 8px 35px;
+}
+
+.issues div {
+    position: absolute;
+    background-color: white;
+    padding: 1rem;
+    display: none;
+    left: 0px;
+    right: 0px;
+}
+
+.issues div ul {
+    list-style: none;
+}
+
+a.selection-active {
+    background: #c83041;
+    color: #fff;
+}
+
+.metadata-calendar dl {
+    padding: 10px;
+}
+
+.metadata-calendar label {
+    background: -webkit-linear-gradient(top,#b1b1b1 0%,#6d6d6d 100%);
+    background: linear-gradient(to bottom,#b1b1b1 0%,#6d6d6d 100%);
+    color: #fff;
+}
+
 /*----------------------------------------------------------------------
 basket
 ----------------------------------------------------------------------*/
