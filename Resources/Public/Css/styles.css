@@ -1212,6 +1212,10 @@ calendar + listview
     padding: 15px 15px 0 15px;
 }
 
+.calendar-items .year {
+    display: none;
+}
+
 .calendar-view {
     background-color: #fff;
     padding: 30px;
@@ -1232,7 +1236,7 @@ table.month caption {
 }
 
 table.month tr:first-child {
-    background: #d8d8d8;
+    /*background: #d8d8d8;*/
     width: 100%;
 }
 
@@ -1265,7 +1269,7 @@ table.month h4:hover {
 
 .year-anchor {
     display: table-cell;
-    padding: 30px;
+    padding: 15px;
     vertical-align: middle;
 }
 
@@ -1393,7 +1397,7 @@ table.month h4:hover {
 }
 
 .calendar-view:hover {
-    background: #242424;
+    background: #d62151;
     box-shadow: 0px 0px 30px 0px rgba(0,0,0,0.75);
 }
 
@@ -1458,7 +1462,7 @@ table.month h4:hover {
 }
 
 .calendar-list-selection a {
-    background: #e4e4e4;
+    background: #2b395a;
     border-radius: 3px;
     display: inline-block;
     padding: 10px;
@@ -1469,7 +1473,7 @@ table.month h4:hover {
 }
 
 .calendar-list-selection a:hover {
-    background: #252525;
+    background: #d6004c;
     color: #fff;
 }
 
