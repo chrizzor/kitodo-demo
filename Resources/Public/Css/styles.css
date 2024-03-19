@@ -1452,6 +1452,8 @@ table.month h4:hover {
 .tx-dlf-calendar .meta-header .year,.tx-dlf-calendar .meta-header .meta-hint-year,.tx-dlf-calendar-years .meta-hint-year {
     padding-top: 5px;
     color: #999;
+    margin-top: 25px;
+    font-size: 24px;
 }
 
 .calendar-list-selection {
@@ -1479,7 +1481,8 @@ table.month h4:hover {
 
 .tx-dlf-calendar,.tx-dlf-calendar-years {
     background: #ffffff;
-    padding: 60px 30px;
+    /*padding: 60px 30px;*/
+    margin-top: 50px;
 }
 
 .tx-dlf-calendar .list-view {

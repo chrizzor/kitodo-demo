@@ -5,6 +5,104 @@ $('#submitBasketForm').text("merken");
 
 $('#kitodo-logo').attr("href", "index.php?id=1");
 
+$( document ).ready(function() {
+    // switch between list and calendar
+    calendarSwitchViews();
+    calendarSelectBox();
+});
+
+function calendarSwitchViews() {
+    // ,calendar-items // .list-view
+    // .select-calendar-view // .select-list-view active
+    // .calendar-list-selection
+    $('.list-view').hide();
+    $('.calendar-list-selection .select-calendar-view').addClass('selection-active');
+    $('.calendar-list-selection .select-calendar-view').on('click', function (evt) {
+        $('.calendar-items').show();
+        $('.list-view').hide()
+        $('.calendar-list-selection .select-calendar-view').addClass('selection-active');
+        $('.calendar-list-selection .select-list-view').removeClass('selection-active');
+    });
+
+    $('.calendar-list-selection .select-list-view').on('click', function (evt) {
+        $('.list-view').show();
+        $('.calendar-items').hide();
+        $('.calendar-list-selection .select-list-view').addClass('selection-active');
+        $('.calendar-list-selection .select-calendar-view').removeClass('selection-active');
+    });
+
+}
+
+function calendarSelectBox() {
+
+    if (isTouchDevice()) {
+        $(document).mouseup(function(e)
+        {
+            var container = $("div.issues div.openSelectBox");
+
+            // if the target of the click isn't the container nor a descendant of the container
+            if (!container.is(e.target) && container.has(e.target).length === 0)
+            {
+                container.hide();
+                container.removeClass('openSelectBox');
+            }
+        });
+
+        $("div.issues div ul").each(function () {
+            var interactiveElement = $(this).closest('div.issues');
+            if ($(this).children('li').length > 1) {
+                interactiveElement.on('click', function (event) {
+                    $("div.issues div.openSelectBox").hide();
+
+                    $(this).children("div").addClass('openSelectBox');
+                    $(this).children("div").show();
+                });
+            } else {
+                // dont show select box
+                // set direct link instead
+                interactiveElement.on('click', function (event) {
+                    window.location.href = $(this).find('div ul li a').attr('href');
+                });
+            }
+        });
+
+    } else {
+
+        $("div.issues div ul").each(function () {
+            var interactiveElement = $(this).closest('div.issues');
+            if ($(this).children('li').length > 1) {
+                // show select box
+                interactiveElement.on('mouseenter', function (event) {
+                    $("div.issues div.openSelectBox").hide();
+
+                    $(this).children("div").addClass('openSelectBox');
+                    $(this).children("div").show();
+
+                    setTimeout(function hoverTimeoutCheck() {
+                        if ($('div.issues div.openSelectBox:hover').length == 0 && $('div.issues:hover').length == 0) {
+                            $("div.issues div.openSelectBox").hide();
+                        } else {
+                            setTimeout(hoverTimeoutCheck, 1000);
+                        }
+                    }, 1000);
+                });
+            } else {
+                // dont show select box
+                // set direct link instead
+                interactiveElement.on('click', function (event) {
+                    window.location.href = $(this).find('div ul li a').attr('href');
+                });
+            }
+        });
+
+    }
+}
+
+function isTouchDevice() {
+    return (('ontouchstart' in window) ||
+        (navigator.maxTouchPoints > 0) ||
+        (navigator.msMaxTouchPoints > 0));
+}
 
 // listview
 
