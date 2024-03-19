@@ -1371,7 +1371,7 @@ table.month h4:hover {
 
 .tx-dlf-calendar .meta-header,.tx-dlf-calendar-years .meta-header {
     background-color: #6e6e6e;
-    border-radius: 3px;
+    /*border-radius: 3px;*/
     webkit-box-shadow: 0px 3px 0px 0px rgba(0,0,0,0.2);
     box-shadow: 0px 3px 0px 0px rgba(0,0,0,0.2);
     margin: 0 15px;
@@ -1383,7 +1383,8 @@ table.month h4:hover {
 .tx-dlf-calendar-years .year-view li {
     position: relative;
     padding: 20px;
-    margin: 30px 30px 0 0;
+    margin-top: 30px;
+    /*margin: 30px 30px 0 0;*/
     text-align: center;
     background: #2b395a;
     color: #fff;
@@ -1428,7 +1429,7 @@ table.month td {
 
 table.month h4 {
     border: 1px solid transparent;
-    border-radius: 3px;
+    /*border-radius: 3px;*/
     font-size: 16px;
     font-weight: 700;
     color: #c83141;
@@ -1465,7 +1466,7 @@ table.month h4:hover {
 
 .calendar-list-selection a {
     background: #2b395a;
-    border-radius: 3px;
+    /*border-radius: 3px;*/
     display: inline-block;
     padding: 10px;
     margin: 2px;
@@ -1486,7 +1487,7 @@ table.month h4:hover {
 }
 
 .tx-dlf-calendar .list-view {
-    background-color: #242424;
+    /*background-color: #242424;*/
     color: #fff;
 }
 
@@ -1494,6 +1495,7 @@ table.month h4:hover {
     border-top: 1px solid #fff;
     background: #444;
     padding: 15px 15px;
+    margin: 20px;
     list-style-type: none;
     -webkit-transition: all 0.1s ease-in-out;
     -moz-transition: all 0.1s ease-in-out;
@@ -1501,7 +1503,7 @@ table.month h4:hover {
 }
 
 .tx-dlf-calendar .list-view li:hover {
-    background: #242424;
+    background: #d6004c;
     box-shadow: 0px 0px 30px 0px rgba(0,0,0,0.75);
 }
 
@@ -1550,7 +1552,7 @@ table.month h4:hover {
 .tx-dlf-calendar-years .year-view li a:hover,.tx-dlf-calendar .list-view a:hover {
     color: #242424;
     background: #fff;
-    border-radius: 3px;
+    /*border-radius: 3px;*/
 }
 
 .calendar-description h2 a,.calendar-description p a {
