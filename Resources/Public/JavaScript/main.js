@@ -5,10 +5,25 @@ $('#submitBasketForm').text("merken");
 
 $('#kitodo-logo').attr("href", "index.php?id=1");
 
+function listviewCalendarSwitch() {
+    $('.tx-dlf-listview li .tx-dlf-type span').each(function() {
+        if ($(this).text().trim().toLowerCase() == 'zeitung' || $(this).text().trim().toLowerCase() == 'jahr') {
+            var link = $(this).parent().parent().find("h2 a").attr('href');
+            link = link.split("?");
+            var params = link[1];
+            link = link[0];
+            link = link.replace('detailseite', 'kalender');
+            link = link.replace('/startseite/trefferliste', '');
+            $(this).parent().parent().find("h2 a").attr('href', link + '?' + params);
+        }
+    });
+}
+
 $( document ).ready(function() {
     // switch between list and calendar
     calendarSwitchViews();
     calendarSelectBox();
+    listviewCalendarSwitch();
 });
 
 function calendarSwitchViews() {
@@ -48,32 +63,32 @@ function calendarSelectBox() {
             }
         });
 
-        $("div.issues div ul").each(function () {
-            var interactiveElement = $(this).closest('div.issues');
-            if ($(this).children('li').length > 1) {
-                interactiveElement.on('click', function (event) {
-                    $("div.issues div.openSelectBox").hide();
-
-                    $(this).children("div").addClass('openSelectBox');
-                    $(this).children("div").show();
-                });
-            } else {
-                // dont show select box
-                // set direct link instead
-                interactiveElement.on('click', function (event) {
-                    window.location.href = $(this).find('div ul li a').attr('href');
-                });
-            }
-        });
+        // $("div.issues div ul").each(function () {
+        //     var interactiveElement = $(this).closest('div.issues');
+        //     if ($(this).children('li').length > 1) {
+        //         interactiveElement.on('click', function (event) {
+        //             $("div.issues div.openSelectBox").hide();
+        //
+        //             $(this).children("div").addClass('openSelectBox');
+        //             $(this).children("div").show();
+        //         });
+        //     } else {
+        //         // dont show select box
+        //         // set direct link instead
+        //         interactiveElement.on('click', function (event) {
+        //             window.location.href = $(this).find('div ul li a').attr('href');
+        //         });
+        //     }
+        // });
 
     } else {
 
-        $("div.issues div ul").each(function () {
+        $("div.issues div.dayLinkList").each(function () {
             var interactiveElement = $(this).closest('div.issues');
-            if ($(this).children('li').length > 1) {
+            if ($(this).children('a').length > 1) {
                 // show select box
                 interactiveElement.on('mouseenter', function (event) {
-                    $("div.issues div.openSelectBox").hide();
+                    // $("div.issues div.dayLinkList").hide();
 
                     $(this).children("div").addClass('openSelectBox');
                     $(this).children("div").show();
@@ -87,14 +102,12 @@ function calendarSelectBox() {
                     }, 1000);
                 });
             } else {
-                // dont show select box
-                // set direct link instead
+                // set direct link
                 interactiveElement.on('click', function (event) {
-                    window.location.href = $(this).find('div ul li a').attr('href');
+                    window.location.href = $(this).find('div a').attr('href');
                 });
             }
         });
-
     }
 }
 
