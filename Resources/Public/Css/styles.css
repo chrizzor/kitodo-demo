@@ -1542,8 +1542,9 @@ table.month h4:hover {
     padding: 15px;
 }
 
-.tx-dlf-calendar-years .year-anchor a,.tx-dlf-calendar-years .meta-hint-year {
-    color: #fff;
+.tx-dlf-calendar-years .year-anchor a,
+.tx-dlf-calendar-years .meta-hint-year {
+    /*color: #fff;*/
 }
 
 .tx-dlf-calendar-years .year-view li a,.tx-dlf-calendar .list-view a {
