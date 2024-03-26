@@ -28,7 +28,7 @@ $( document ).ready(function() {
 });
 
 function calendarTitleOnly() {
-    if ($('.tx-dlf-calendar')) {
+    if ($('.tx-dlf-calendar').length) {
         var title = $('.tx-dlf-metadata .metadata-title ul li').text();
         $('.tx-dlf-metadata').parent().append('<div class="title-only">' + title + '</div>')
         $('.tx-dlf-metadata').hide();
