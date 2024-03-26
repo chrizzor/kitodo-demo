@@ -24,7 +24,17 @@ $( document ).ready(function() {
     calendarSwitchViews();
     calendarSelectBox();
     listviewCalendarSwitch();
+    calendarTitleOnly();
 });
+
+function calendarTitleOnly() {
+    if ($('.tx-dlf-calendar')) {
+        var title = $('.tx-dlf-metadata .metadata-title ul li').text();
+        $('.tx-dlf-metadata').parent().append('<div class="title-only">' + title + '</div>')
+        $('.tx-dlf-metadata').hide();
+
+    }
+}
 
 function calendarSwitchViews() {
     // ,calendar-items // .list-view
