@@ -2205,6 +2205,11 @@ max 700px
         padding: 0 15px;
     }
 
+    .fullsize-pagegrid {
+        width: 100%;
+        top: 30vh;
+    }
+
 }
 
 .ol-viewport {
