@@ -846,7 +846,29 @@ detail-view
     background: #005182;
 }
 
-.tx-dlf-toolbox li a,
+.tx-button {
+    margin-top: 20px;
+}
+
+.tx-button a {
+    text-align: center;
+    width: 30px;
+    height: 22px;
+    line-height: 1;
+    padding: 8px;
+    display: inline-block;
+    background: #003064;
+    color: #fff !important;
+    text-decoration: none !important;
+    text-shadow: 0px 1px 0px rgb(86, 7, 16);
+    border: 0;
+    margin: 0;
+    cursor: pointer;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+}
+
 .tx-dlf-navigation li a,
 .tx-dlf-Navigation li a,
 .tx-dlf-pageview div a {
@@ -1077,7 +1099,6 @@ detail-view
 
 .tx-dlf-pagegrid {
     z-index: 4;
-    width: 73%;
     text-align: center;
     background: #f3f3f3;
     margin: 0 auto;
@@ -1127,10 +1148,13 @@ detail-view
 }
 
 .fullsize-pagegrid {
+    width: 75%;
     display: none;
     position: absolute;
     left: 0px;
-    top: 138px;
+    top: 10vh;
+    height: 100vh;
+    background-color: #ffffffde;
 }
 
 .fullsize-pagegrid .tx-dlf-pagegrid {

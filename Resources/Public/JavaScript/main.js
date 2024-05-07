@@ -25,7 +25,15 @@ $( document ).ready(function() {
     calendarSelectBox();
     listviewCalendarSwitch();
     calendarTitleOnly();
+    pageGridButton();
 });
+
+function pageGridButton() {
+    $('#pagegrid').on('click', function (evt) {
+        evt.preventDefault();
+        $('.fullsize-pagegrid').toggle();
+    });
+}
 
 function calendarTitleOnly() {
     if ($('.tx-dlf-calendar').length || $('.tx-dlf-calendar-years').length) {
