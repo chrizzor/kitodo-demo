@@ -7,7 +7,7 @@ plugin.tx_presentationpackage.view {
 page.includeCSS {
     main = EXT:presentation_package/Resources/Public/Css/main.css
     styles = EXT:presentation_package/Resources/Public/Css/styles.css
-    fontawesome = EXT:presentation_package/Resources/Public/Fonts/fontawesome/all.css
+    fontawesome = EXT:presentation_package/Resources/Public/Fonts/fontawesome/css/all.css
 }
 
 page.includeJS {
