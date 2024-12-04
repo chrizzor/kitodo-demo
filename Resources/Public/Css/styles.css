@@ -11,7 +11,7 @@ body {
     margin: 0;
     border: 0 none;
     padding: 0;
-    color: #011e4a;
+    color: #003541;
     font-family: 'Prompt', sans-serif;
     font-weight: 300;
     font-size: 16px;
@@ -43,7 +43,7 @@ textarea {
 }
 
 a {
-    color: #011e4a;
+    color: #003541;
     text-decoration: none;
     -webkit-transition: all 0.5s ease-in-out;
     -moz-transition: all 0.5s ease-in-out;
@@ -51,7 +51,7 @@ a {
 }
 
 a:hover, a:focus, a:active {
-    color: #d4014c;
+    color: #00B4FF;
     text-decoration: underline;
     outline-width: 0;
 }
@@ -150,7 +150,7 @@ input[type=submit] {
     padding: 8px 10px;
     font-weight: 700;
     font-size: 16px;
-    background: #d5014c;
+    background: #00B4FF;
     color: #fff;
     cursor: pointer;
 }
@@ -243,7 +243,7 @@ header {
 
 .portal-main-search {
     padding: 15px 0;
-    background: #011e4a;
+    background: #003541;
 }
 
 .portal-main-search .header-wrapper.header-background {
@@ -285,7 +285,7 @@ article.breadcrumb span {
 }
 
 article.breadcrumb a:hover {
-    color:#d6004c;
+    color:#00B4FF;
 
 }
 
@@ -348,7 +348,7 @@ collection-list
     webkit-box-shadow: 0 20px 20px -10px rgba(74,74,74,0.3);
     -moz-box-shadow: 0 20px 20px -10px rgba(74,74,74,0.3);
     box-shadow: 0 20px 20px -10px rgba(74,74,74,0.3);
-    border-top: 4px solid #d5014c;
+    border-top: 4px solid #00B4FF;
     margin: 30px 0 30px 0;
     position: relative;
 }
@@ -376,7 +376,7 @@ collection-list
     width: 60px;
     height: 60px;
     margin: 0 30px -30px 0;
-    background: url(../Images/icon-shlb-arrow-more-w.svg) no-repeat #003064;
+    background: url(../Images/icon-shlb-arrow-more-w.svg) no-repeat #003541;
     background-size: 14px 14px;
     background-position: center center;
     color: transparent;
@@ -384,7 +384,7 @@ collection-list
 }
 
 .tx-dlf-collection-list .collection-link a:hover {
-    background: url(../Images/icon-shlb-arrow-more-w.svg) no-repeat #d5014c;
+    background: url(../Images/icon-shlb-arrow-more-w.svg) no-repeat #00B4FF;
     background-size: 14px 14px;
     background-position: center center;
 }
@@ -537,7 +537,7 @@ listview
 }
 
 .tx-dlf-listview .f3-widget-paginator li a {
-    background: #003064;
+    background: #003541;
     color: #fff;
     padding: 8px 15px;
     display: block;
@@ -757,7 +757,7 @@ ol.tx-dlf-listview-list {
     webkit-box-shadow: 0 20px 20px -10px rgba(74,74,74,0.3);
     -moz-box-shadow: 0 20px 20px -10px rgba(74,74,74,0.3);
     box-shadow: 0 20px 20px -10px rgba(74,74,74,0.3);
-    border-top: 4px solid #d5014c;
+    border-top: 4px solid #00B4FF;
     margin-bottom: 60px !important; /* this is not good */
     /* reason for !importent is important in styles.css .tx-dlf-search-facets margin: 0 !important; */
 }
@@ -768,7 +768,7 @@ ol.tx-dlf-listview-list {
 }
 
 .dropdown-menu ul li.tx-dlf-search-cur {
-    background: #D5014C;
+    background: #00B4FF;
 }
 
 .dropdown-menu ul li.tx-dlf-search-cur a {
@@ -857,7 +857,7 @@ detail-view
     line-height: 1;
     padding: 8px;
     display: inline-block;
-    background: #003064;
+    background: #003541;
     color: #fff !important;
     text-decoration: none !important;
     text-shadow: 0px 1px 0px rgb(86, 7, 16);
@@ -876,7 +876,7 @@ detail-view
     line-height: 0;
     font-size: 16px;
     display: inline-block;
-    background: #003064;
+    background: #003541;
     color: #fff !important;
     font-weight: 700;
     text-decoration: none !important;
@@ -893,14 +893,14 @@ detail-view
 .tx-dlf-navigation li a:hover,
 .tx-dlf-Navigation li a:hover,
 .tx-dlf-pageview div a:hover {
-    background: #d5014c !important;
+    background: #00B4FF !important;
     transition: background 0.5s ease-in-out;
     -webkit-transition: background 0.5s ease-in-out;
     -moz-transition: background 0.5s ease-in-out;
 }
 
 .tx-dlf-toolbox li a.active {
-    background: #cc0a4b !important;
+    background: #00B4FF !important;
 }
 
 .tx-dlf-navigation-pageselect div,
@@ -955,7 +955,7 @@ detail-view
 
 .detail-view-itemoptions .dropdown-menu > label,
 .detail-view-itemdetails .dropdown-menu > label {
-    background: url(../Images/icon-shlb-arrow-down-w.svg) no-repeat right center #003064;
+    background: url(../Images/icon-shlb-arrow-down-w.svg) no-repeat right center #003541;
     background-size: 16px 16px;
     margin-top: 5px;
     color: #fff;
@@ -965,7 +965,7 @@ detail-view
 
 .detail-view-itemoptions .dropdown-menu > label:hover,
 .detail-view-itemdetails .dropdown-menu > label:hover {
-    background: url(../Images/icon-shlb-arrow-down-w.svg) no-repeat right center #d5014c;
+    background: url(../Images/icon-shlb-arrow-down-w.svg) no-repeat right center #00B4FF;
     background-size: 16px 16px;
     color: #fff;
 }
@@ -986,7 +986,7 @@ detail-view
 }
 
 .detail-view-itemoptions .dropdown-menu input[type=checkbox]:checked ~ label {
-    background: url(../Images/icon-shlb-arrow-up-w.svg) no-repeat right center #d5014c;
+    background: url(../Images/icon-shlb-arrow-up-w.svg) no-repeat right center #00B4FF;
     background-size: 16px 16px;
     color: #fff;
 }
@@ -1196,7 +1196,7 @@ detail-view
 }
 
 .fullsize-pagegrid .tx-dlf-pagegrid .tx-dlf-pagegrid-thumbnail a:hover img {
-    border: 3px solid #003064;
+    border: 3px solid #003541;
 }
 
 .fullsize-pagegrid .tx-dlf-pagegrid-pagination {
@@ -1206,7 +1206,7 @@ detail-view
 }
 
 .fullsize-pagegrid .tx-dlf-pagegrid-cur .tx-dlf-pagegrid-thumbnail img {
-    border: 3px solid #003064;
+    border: 3px solid #003541;
 }
 
 dd.tx-dlf-metadata-title.detail-view-title-main {
@@ -1409,7 +1409,7 @@ table.month h4:hover {
     webkit-box-shadow: 0 20px 20px -10px rgba(74,74,74,0.3);
     -moz-box-shadow: 0 20px 20px -10px rgba(74,74,74,0.3);
     box-shadow: 0 20px 20px -10px rgba(74,74,74,0.3);
-    border-top: 4px solid #d5014c;
+    border-top: 4px solid #00B4FF;
     /* margin: 30px 0 30px 0; */
     position: relative;
 }
@@ -1434,7 +1434,7 @@ table.month h4:hover {
 }
 
 .calendar-view:hover {
-    background: #d62151;
+    background: #00B4FF;
     box-shadow: 0px 0px 30px 0px rgba(0,0,0,0.75);
 }
 
@@ -1468,7 +1468,7 @@ table.month h4 {
     /*border-radius: 3px;*/
     font-size: 16px;
     font-weight: 700;
-    color: #c83141;
+    color: #00B4FF;
     cursor: pointer;
     -webkit-transition: all 0.3s ease-in-out;
     -moz-transition: all 0.3s ease-in-out;
@@ -1512,7 +1512,7 @@ table.month h4:hover {
 }
 
 .calendar-list-selection a:hover {
-    background: #d6004c;
+    background: #00B4FF;
     color: #fff;
 }
 
@@ -1539,7 +1539,7 @@ table.month h4:hover {
 }
 
 .tx-dlf-calendar .list-view li:hover {
-    background: #d6004c;
+    background: #00B4FF;
     box-shadow: 0px 0px 30px 0px rgba(0,0,0,0.75);
 }
 
@@ -1632,7 +1632,7 @@ article.calendar-metadata ul li dl {
 }
 
 a.selection-active {
-    background: #c83041;
+    background: #00B4FF;
     color: #fff;
 }
 
@@ -1722,7 +1722,7 @@ footer
 
 footer {
     width: 100%;
-    background: #003064;
+    background: #003541;
     margin: 60px 0 0 0;
     clear: both;
 }
@@ -1749,13 +1749,13 @@ footer {
 
 #footer-content li a {
     background: #fff;
-    color: #003064;
+    color: #003541;
     padding: 5px;
     text-decoration: none;
 }
 
 #footer-content li a:hover {
-    background: #D4004B;
+    background: #00B4FF;
     color: #fff;
 }
 
@@ -2347,7 +2347,7 @@ ul.tx-dlf-toolbox span a img {
 }
 
 .detail-view-tools .dropdown-menu label:hover {
-    background: url(../Images/icon-arrow-down.svg) no-repeat 24px 24px #cc0a4b;
+    background: url(../Images/icon-arrow-down.svg) no-repeat 24px 24px #00B4FF;
     background-size: 24px auto;
     transition: background 0.5s ease-in-out;
     -webkit-transition: background 0.5s ease-in-out;
@@ -2382,13 +2382,13 @@ ul.tx-dlf-toolbox span a img {
 }
 
 .detail-view-itemoptions .dropdown-menu input[type=checkbox]:checked ~ label {
-    background: url(../Images/icon-shlb-arrow-up-w.svg) no-repeat right center #d5014c;
+    background: url(../Images/icon-shlb-arrow-up-w.svg) no-repeat right center #00B4FF;
     background-size: 16px 16px;
     color: #fff;
 }
 
 .detail-view-tools .dropdown-menu input[type=checkbox]:checked ~ label {
-    background: url(../Images/icon-shlb-arrow-up-w.svg) no-repeat right center #d5014c;
+    background: url(../Images/icon-shlb-arrow-up-w.svg) no-repeat right center #00B4FF;
     background-size: 16px 16px;
     color: #fff;
 }
@@ -2462,7 +2462,7 @@ span.no-fulltext {
 }
 
 .detail-view-itemoptions .tx-dlf-basket-button a:hover {
-    background: url(../Images/icon-star.svg) no-repeat 10px center #cc0a4b;
+    background: url(../Images/icon-star.svg) no-repeat 10px center #00B4FF;
     background-size: 16px 16px;
     color: #fff;
 }
@@ -2546,7 +2546,7 @@ span.no-fulltext {
 /*    top: -75px;*/
 /*    left: -55px;*/
 /*    width: 80px;*/
-/*    border: 2px solid #cc0a4b;*/
+/*    border: 2px solid #00B4FF;*/
 /*    z-index: 99;*/
 /*}*/
 
@@ -2581,7 +2581,7 @@ aside .tx-dlf-pagegrid-pagebrowser {
 }
 
 .volume-list li a:hover {
-    background: #cc0a4b;
+    background: #00B4FF;
 }
 
 .termsOfUse {
@@ -2718,15 +2718,15 @@ span.fullPdfDownloadSpan img {
 }
 
 .dlf-search-switch input:hover + label {
-    background: rgb(145 0 52) !important;
+    background: rgb(0, 104, 145) !important;
     transition: background 0.5s ease-in-out;
     -webkit-transition: background 0.5s ease-in-out;
     -moz-transition: background 0.5s ease-in-out;
 }
 
 .dlf-search-switch input:checked + label {
-    background-color: #d4014c;
-    border: 1px solid #c00044;
+    background-color: #00B4FF;
+    border: 1px solid #00B4FF;
 }
 
 .tx-dlf-metadata dt.tx-dlf-metadata-type,
@@ -2750,7 +2750,7 @@ span.multivalued dd:not(:last-child):after {
 
 .tx-dlf-listview-collection-thumbnail {
     padding: 0 0 15px 0;
-    border-bottom: 1px solid #d5014c;
+    border-bottom: 1px solid #00B4FF;
     margin: 0 0 30px 0;
 }
 
