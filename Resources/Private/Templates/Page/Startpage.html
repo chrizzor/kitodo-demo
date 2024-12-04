@@ -53,7 +53,7 @@
                                             title="{item.linktext}"
                                             class="{itemClass}"
                                             target="{itemTarget}">
-                                        <v:page.resources.fal table="pages" field="media" uid="{item.uid}" as="images" slide="-1" >
+                                        <v:page.resources.fal table="pages" field="media" limit="1" uid="{item.uid}" as="images" slide="-1" >
                                             <span class="tx-dlf-collection-thumbnail">
                                                 <f:for each="{images}" as="image">
                                                     <f:image src="{image.url}" alt="{item.linktext}" title="{image.title}" />

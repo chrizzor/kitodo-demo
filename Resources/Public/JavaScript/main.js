@@ -127,7 +127,7 @@ $(".tx-dlf-metadata .show-metadata").on("click", function (evt) {
             $(".tx-dlf-metadata dd.tx-dlf-metadata-title")
                 .text()
                 .substring(0, 70) + " ..."
-            );
+        );
     }
 
 });
@@ -245,35 +245,48 @@ $(document).ready(function() {
     addLicenseIcon();
     metdataLinkReplacement();
     linkButtonToPdfGeneration();
+    linkButtonToZipGeneration();
     pageGridToggle();
-    // AVI 20230803 for copy PURL (directlink) into User-buffer 
+    // AVI 20230803 for copy PURL (directlink) into User-buffer
     copyDirectlink2Buffer();
 });
 
 
 function copyDirectlink2Buffer() {
-	//AVI 20230803 for copy PURL (directlink) into User-buffer 
+    //AVI 20230803 for copy PURL (directlink) into User-buffer
     $('.copyDirectLink2Buffer').on("click", function (event) {
         event.preventDefault();
-	// Text, der kopiert werden soll, die Frage ich, wie bekommt man metadata-values->PURL hier rein...da alle metadata-feld nicht zu unterscheiden sind. ggf. direct von XML wieder? 
+        // Text, der kopiert werden soll
+        // erst Wunsch: purl
         var text = $('#purl-link a').attr('href');
+        // zweite Wunsch: diese konkrete Seite
+        var myUrl = new URL(window.location.toLocaleString());
+        var myUrlParams = new URLSearchParams(myUrl.search);
+        var myPageNr = " ";
+        if( myUrlParams.has("tx_dlf[page]")){
+            myPageNr = myUrlParams.get("tx_dlf[page]");
+        }
+
 
         // Erstelle ein unsichtbares Textfeld
-        var textfeld = document.createElement("textarea");
-        textfeld.value = text;
+        var textfeld = document.createElement('textarea');
         document.body.appendChild(textfeld);
+        // baue URL aus PURL und SeitenNummer
+        textfeld.innerHTML = text + '/' + myPageNr;
 
         // Kopiere den Text aus dem Textfeld
         textfeld.select();
         textfeld.setSelectionRange(0, 99999); // For mobile devices
-        navigator.clipboard.writeText(textfeld.value);
+        // erste Versuch, funktioniert nicht auf Chrome-iOS
+        //navigator.clipboard.writeText(textfeld.innerHTML);
+        document.execCommand("copy");
 
 
         // Entferne das Textfeld
         document.body.removeChild(textfeld);
 
-        // Gib eine Bestätigungsmeldung aus
-       alert("test: " + textfeld.value)
+        // Bestätigungsmeldung ausgeben
+        alert("Referenz '" + textfeld.value + "' kopiert");
     });
 
 }
@@ -288,10 +301,10 @@ function shortenDescription() {
     //     shortenText($(this));
     // });
     $('.tx-dlf-collection-description').each(function() {
-       shortenText($(this));
+        shortenText($(this));
     });
     $('.tx-dlf-collection-description-list').each(function() {
-       shortenListText($(this));
+        shortenListText($(this));
     });
     showMoreClickHandler();
 }
@@ -311,7 +324,7 @@ function showMoreClickHandler() {
 }
 
 function shortenText(element) {
-    if ($(element).text().length > 100) {
+    if ($(element).text().trim().length > 100) {
         $(element).addClass('shorten-text-4');
         $('<p><a href="#" class="description-show-more">mehr...</a></p>').insertAfter($(element));
     }
@@ -319,11 +332,10 @@ function shortenText(element) {
 }
 
 function shortenListText(element) {
-    if ($(element).text().length > 100) {
+    if ($(element).text().trim().length > 100) {
         $(element).text($(element).text().substr(0,97) + "...") ;
-	    // text.slice(0, count) + ((text.length > count) ? "..." : "");
     }
-    
+
 }
 
 function initialFacetValueRestriction() {
@@ -412,13 +424,16 @@ function metdataLinkReplacement() {
     });
 }
 
+function linkButtonToZipGeneration() {
+    $('#zipDownload').attr('href', $('#zip-generate-link a').attr('href'));
+}
 function linkButtonToPdfGeneration() {
     $('#fullPdfDownload').attr('href', $('#pdf-generate-link a').attr('href'));
 }
 
 function pageGridToggle() {
     $('#pagegrid-button').on('click', function (evt) {
-       evt.preventDefault();
-       $('.fullsize-pagegrid').toggle();
+        evt.preventDefault();
+        $('.fullsize-pagegrid').toggle();
     });
 }
