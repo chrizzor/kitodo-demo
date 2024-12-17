@@ -2674,14 +2674,6 @@ span.fullPdfDownloadSpan img {
     display: none !important;
 }
 
-.tx-dlf-tools-pdf-page {
-    display: none !important;
-}
-
-.tx-dlf-tools-pdf-work {
-    display: none !important;
-}
-
 .dlf-search-switch {
     display: flex;
     overflow: hidden;
