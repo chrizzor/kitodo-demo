@@ -1215,6 +1215,10 @@ dd.tx-dlf-metadata-title.detail-view-title-main {
     font-weight: 600;
 }
 
+div.tx-dlf-pagegrid ul.pagination {
+    display: none;
+}
+
 /*----------------------------------------------------------------------
 calendar + listview
 ----------------------------------------------------------------------*/
