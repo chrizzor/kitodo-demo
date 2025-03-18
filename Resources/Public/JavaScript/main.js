@@ -331,6 +331,7 @@ $(document).ready(function() {
     setTitleOnDetailPage();
     shortenDescription();
     addLicenseIcon();
+    combineMetadataWithLinks();
 });
 
 function shortenDescription() {
@@ -435,4 +436,11 @@ function addLicenseIcon() {
 
         $('.license_label_value').prepend('<a href="' + link + '"><img src="' + icon + '"/></a>');
     }
+}
+
+function combineMetadataWithLinks() {
+    $('.addlink').each(function( index ) {
+        var text = $(this).text();
+        $(this).html('<a href="' + $('.'+$(this).attr('id')+'Link').text() + '">' + text + '</a>');
+    });
 }
