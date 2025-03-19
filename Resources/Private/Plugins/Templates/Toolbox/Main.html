@@ -92,7 +92,7 @@
                     <f:if condition="{fulltext}">
                         <f:then>
                             <a class="select switchoff" id="tx-dlf-tools-fulltext" title=""
-                               data-dic="fulltext:{f:translate(key: 'tools.fulltext')};fulltext-loading:{f:translate(key: 'tools.fulltext.loading')};fulltext-on:{f:translate(key: 'tools.fulltext.on')};fulltext-off:{f:translate(key: 'tools.fulltext.off')};activate-full-text-initially:{activateFullTextInitially};full-text-scroll-element:#tx-dlf-fulltextselection;search-hl-parameters:{settings.searchHlParameters}">
+                               data-dic="fulltext:{f:translate(key: 'tools.fulltext')};fulltext-loading:{f:translate(key: 'tools.fulltext.loading')};fulltext-on:;fulltext-off:;activate-full-text-initially:{activateFullTextInitially};full-text-scroll-element:#tx-dlf-fulltextselection;search-hl-parameters:{settings.searchHlParameters}">
                                 &nbsp;
                             </a>
                         </f:then>
@@ -153,6 +153,7 @@
                         </f:else>
                     </f:if>
                 </span>
+                <f:comment>
                 <span class="tx-dlf-tools-pdf-work">
                     <f:if condition="{workLink}">
                         <f:then>
@@ -162,6 +163,7 @@
                         </f:then>
                     </f:if>
                 </span>
+                </f:comment>
             </li>
             <li class="tx-button">
                 <a id="fullPdfDownload" href="#"><img src="/typo3conf/ext/presentation_package/Resources/Public/Images/icon-pdf-white.svg" alt="PDF Download"></a>
