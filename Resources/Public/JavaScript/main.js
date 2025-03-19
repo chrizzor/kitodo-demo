@@ -332,6 +332,7 @@ $(document).ready(function() {
     shortenDescription();
     addLicenseIcon();
     combineMetadataWithLinks();
+    generateFullPdfLink();
 });
 
 function shortenDescription() {
@@ -443,4 +444,13 @@ function combineMetadataWithLinks() {
         var text = $(this).text();
         $(this).html('<a href="' + $('.'+$(this).attr('id')+'Link').text() + '">' + text + '</a>');
     });
+}
+
+function generateFullPdfLink() {
+    var originalHref = $('.tx-dlf-tools-pdf-page a').attr('href');
+
+    if (originalHref && originalHref.includes("/images/pdf/")) {
+        var newHref = originalHref.replace(/\/images\/pdf\/[^/]+\.pdf$/, "/images/full.pdf");
+        $('#fullPdfDownload').attr('href', newHref);
+    }
 }

@@ -87,18 +87,18 @@
 
     <f:if condition="{renderFulltextTool}">
         <f:then>
-            <li class="tx-button">
+            <li>
                 <span class="tx-dlf-tools-fulltext">
                     <f:if condition="{fulltext}">
                         <f:then>
                             <a class="select switchoff" id="tx-dlf-tools-fulltext" title=""
-                                data-dic="fulltext:;fulltext-loading:;fulltext-on:;fulltext-off:;activate-full-text-initially:{activateFullTextInitially};full-text-scroll-element:{settings.fullTextScrollElement};search-hl-parameters:{settings.searchHlParameters}">
+                               data-dic="fulltext:{f:translate(key: 'tools.fulltext')};fulltext-loading:{f:translate(key: 'tools.fulltext.loading')};fulltext-on:{f:translate(key: 'tools.fulltext.on')};fulltext-off:{f:translate(key: 'tools.fulltext.off')};activate-full-text-initially:{activateFullTextInitially};full-text-scroll-element:{settings.fullTextScrollElement};search-hl-parameters:{settings.searchHlParameters}">
+                                &nbsp;
                             </a>
                         </f:then>
                         <f:else>
                             <span class="no-fulltext">
-                                <f:comment><f:translate key="tools.fulltext.not-available"/></f:comment>
-                                <img src="/typo3conf/ext/presentation_package/Resources/Public/Images/icon-text-white.svg" alt="{f:translate(key: 'tools.fulltext.not-available')}">
+                                <f:translate key="tools.fulltext.not-available"/>
                             </span>
                         </f:else>
                     </f:if>
@@ -109,12 +109,12 @@
 
     <f:if condition="{renderFulltextDownloadTool}">
         <f:then>
-            <li class="tx-button">
+            <li>
                 <span class="tx-dlf-tools-fulltextdownload">
                     <f:if condition="{fulltextDownload}">
                         <f:then>
                             <a href="#" id="tx-dlf-tools-fulltextdownload"
-                                title="{f:translate(key: 'tools.fulltextdownload.download-current-page')}">
+                               title="{f:translate(key: 'tools.fulltextdownload.download-current-page')}">
                                 <f:translate key="tools.fulltextdownload.download-current-page"/>
                             </a>
                         </f:then>
