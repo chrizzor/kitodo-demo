@@ -419,6 +419,7 @@ main#detail-view #main-content {
 
 .home-newscontent {
     display: grid;
+    # AVI: erstmal nichts geändert, 4 wäre aber einheitlicher, gleich wie in Collections-Bereich ;;
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 40px;
     padding: 0 0 60px 0;
@@ -478,13 +479,21 @@ main#detail-view #main-content {
 collection-list
 ----------------------------------------------------------------------*/
 
+
 .tx-dlf-collection-list  {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    # AVI:;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-gap: 40px;
     list-style-type: none;
     padding: 0;
 }
+
+    # AVI:;
+.tx-dlf-collection-list  {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
 
 .tx-dlf-collection-item {
     position: relative;
@@ -493,13 +502,14 @@ collection-list
 .tx-dlf-collection-list li a {
     display: block;
     background-color: #EDEDED;
-    padding: 30px;
     min-height: 240px;
 }
 
 .tx-dlf-collection-list li a:hover {
     background-color: #008877;
     color: #FFFFFF;
+    # AVI:;
+    text-decoration: none;
 }
 
 .tx-dlf-collection-list .collection-title {
@@ -509,6 +519,8 @@ collection-list
     font-family: 'Roboto Slab';
     font-size: 24px;
     line-height: 28px;
+    # AVI:;
+    margin-left: 1em;
 }
 
 .tx-dlf-collection-thumbnail img {
@@ -529,6 +541,11 @@ collection-list
     -webkit-transition: all 0.5s ease-in-out;
     -moz-transition: all 0.5s ease-in-out;
     transition: all 0.5s ease-in-out;
+    # AVI:;
+    width: -moz-available;
+    width: -webkit-fill-available;
+    height: 2em;
+
 }
 
 .tx-dlf-collection-list li a:hover .collection-headline {
@@ -538,11 +555,15 @@ collection-list
 
 .tx-dlf-collection-counts {
     display: block;
-    margin: 30px 0 0 0;
+    #margin: 30px 0 0 0;
+    # AVI:;
+    margin: 30px 0 0 1em;
 }
 
 .tx-dlf-collection-list .collection-link {
     display: block;
+    # AVI:;
+    margin-left: 1em;
 }
 
 /*----------------------------------------------------------------------
@@ -676,24 +697,24 @@ listview
     margin: 0 30px 0 0;
 }
 
-.tx-dlf-listview .f3-widget-paginator {
+.tx-dlf-listview .pagination {
     border-top: 1px solid #d8d8d8;
     list-style: none;
     padding: 15px 0 0 0;
 }
 
-.tx-dlf-listview .f3-widget-paginator li {
+.tx-dlf-listview .pagination li {
     display: inline-block;
 }
 
-.tx-dlf-listview .f3-widget-paginator li a {
+.tx-dlf-listview .pagination li a {
     background: #00554A;
     color: #FFFFFF;
     padding: 8px 15px;
     display: block;
 }
 
-.tx-dlf-listview .f3-widget-paginator li.current {
+.tx-dlf-listview .pagination li.current {
     background: #d8d8d8;
     padding: 8px 15px;
 }
@@ -933,6 +954,13 @@ ol.tx-dlf-listview-list {
     -webkit-line-clamp: 6; /* number of lines to show */
     line-clamp: 6;
     -webkit-box-orient: vertical;
+    #AVI:;
+    overflow: hidden;
+    max-height: calc(1.2em * 3);
+    line-height: 1.2em;
+    display: inline-block;
+    padding-left: 1em;
+    text-overflow: ellipsis
 }
 
 /*----------------------------------------------------------------------
@@ -996,7 +1024,7 @@ detail-view
 }
 
 .tx-dlf-navigation li img {
-    width: 30px;
+    width: 11px;
     height: auto;
 }
 
@@ -1561,8 +1589,10 @@ max 1600px
     .tx-dlf-collection-list,
     .calendar-items,
     .tx-dlf-newspaper-years .year-view ul {
-        grid-template-columns: 1fr 1fr 1fr;
+    # AVI:;
+        grid-template-columns:  1fr 1fr 1fr 1fr;
     }
+
 
     .tx-dlf-collection-list h2 {
         hyphens: auto;
@@ -2570,10 +2600,12 @@ a#tx-dlf-tools-fulltext:after {
 }
 
 span.fullPdfDownloadSpan,
+span.zipDownloadSpan,
 span.tx-dlf-tools-fulltext {
     padding: 0 !important;
 }
 
+span.zipDownloadSpan,
 span.fullPdfDownloadSpan img {
     width: 24px;
     height: auto;

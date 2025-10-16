@@ -8,6 +8,7 @@
 
     <f:section name="Configuration">
         <flux:form id="digitalisateDetail" label="Digitalisate Detail">
+	llllllllllllllllllllllllllllllllllllllllllll
             <!-- Insert fields, sheets, grid, form section objects etc. here, in this flux:form tag -->
         </flux:form>
 
@@ -89,11 +90,49 @@
         <main class="clear" id="detail-view">
             <aside>
                 <section>
-                    <div class="detail-aside-nav">
-                        <v:content.render column="3" />
-                        <v:content.render column="7" />
-                    </div>
-                </section>
+                     <div class="detail-aside-nav">
+			     <v:content.render column="3" />
+			     <v:content.render column="7" />
+		     </div> 
+
+<f:comment>
+ORI 20250220 AVI 
+		        <style>
+            /* Flexbox-Layout für nebeneinander stehende Spalten */
+            .detail-aside-nav {
+                display: flex; /* Flexbox aktivieren */
+                width: 100%; /* Sicherstellen, dass der Container die volle Breite ausnutzt */
+            }
+
+            .column-left, .column-right {
+                min-width: 0; /* Verhindert, dass Flexbox die Spalten über die Containerbreite hinaus dehnt */
+                padding: 1px; /* Optional: Abstand innerhalb der Spalten */
+                border: 1px solid #ccc; /* Optional: Eine leichte Rahmenlinie zur Sichtbarkeit */
+            }
+
+            /* Alternativ: Wenn du unterschiedliche Breiten für die Spalten möchtest */
+            .column-left {
+                flex-basis: 50%; 
+            }
+
+            .column-right {
+                flex-basis: 50%;
+            }
+        </style>
+
+        <div class="detail-aside-nav">
+            <!-- Inhalt aus Spalte 7 -->
+            <div class="column-left">
+                <v:content.render column="7" />
+            </div>
+
+            <!-- Inhalt aus Spalte 3 -->
+            <div class="column-right">
+                <v:content.render column="3" />
+            </div>
+        </div>
+</f:comment>
+    </section>
 
                 <article class="detail-view-itemoptions">
                     <!-- Metadaten -->

@@ -121,7 +121,7 @@
     </li>
 </f:section>
 
-<f:section name="render.pageselect">
+<f:section name="render.pageSelect">
     <li class="pages tx-dlf-navigation-pageselect">
         <f:form method="post" action="pageSelect" controller="Navigation" name="pageSelectForm" object="{pageSelectForm}" addQueryString="1">
             <f:if condition="{viewData.requestData.id}">
@@ -131,7 +131,12 @@
                 <f:form.hidden property="recordId" value="{viewData.requestData.recordId}"/>
             </f:if>
             <f:if condition="{viewData.requestData.double}">
+                <f:then>
                 <f:form.hidden property="double" value="{viewData.requestData.double}"/>
+                </f:then>
+                <f:else>
+                <f:form.hidden property="double" value="0"/>
+                </f:else>
             </f:if>
             <label for="tx-dlf-page-{viewData.uniqueId}">
                 <f:translate key="selectPage"/>
@@ -197,7 +202,7 @@
     </li>
 </f:section>
 
-<f:section name="render.listview">
+<f:section name="render.listView">
         <li class="tx-dlf-navigation-listview tx-dlf-navigation-backtolist" style="display: none;">
             <f:link.page pageUid="{settings.targetPid}" additionalParams="{lastSearchParams}">
                 <f:translate key="linkToList"/>

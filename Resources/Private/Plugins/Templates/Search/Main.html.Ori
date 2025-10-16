@@ -13,11 +13,10 @@
       data-namespace-typo3-fluid="true">
 
 <f:form action="search" controller="Search" name="searchParameter" method="get" class="tx-dlf-search-form">
-    <label for="tx-dlf-search-query-{viewData.uniqueId}">
     <f:comment>
+    <label for="tx-dlf-search-query-{viewData.uniqueId}">
         <f:if condition="{lastSearch.query}">
-            <f:then>{lastSearch.query -> f:format.htmlspecialchars()}
-	</f:then>
+            <f:then>{lastSearch.query -> f:format.htmlspecialchars()}</f:then>
             <f:else><f:translate key="search.query"/></f:else>
         </f:if>
     </label>
@@ -27,22 +26,6 @@
     <f:if condition="{settings.extendedSlotCount} > 0">
         <f:then>
             <f:form.textfield id="tx-dlf-search-query" property="query" value="{lastSearch.query}" />
-
-
-    <f:comment>
-	    <!-- AVI -->
-            <f:if condition="{lastSearch.query} =='Hs-3227'">
-                <f:then>
-
-		<f:variable name="lastSearch" value='{query:"00003119"}' />
-            <f:form.textfield id="tx-dlf-search-query" property="query" value="{lastSearch.query}" />
-                </f:then>
-                <f:else>
-            <f:form.textfield id="tx-dlf-search-query" property="query" value="{lastSearch.query}" />
-                </f:else>
-            </f:if>
-	    <!-- /AVI -->
-    </f:comment>
 
             <f:if condition="{showLogicalPageField}">
                 <f:then>
