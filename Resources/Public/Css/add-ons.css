@@ -1,0 +1,130 @@
+/* ------------------------------------------------------------
+eWW Ergänzungen DFG-Viewer
+------------------------------------------------------------ */
+
+body {
+	font-family: 'Roboto', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'Roboto Slab';
+ 	font-weight: 600;
+}
+
+.control-bar {
+	background: #008877;
+}
+
+.control-bar .header-bar {
+	top: 0;
+	background: #ffffff;
+	text-align: left;
+	border-bottom: 1px solid #008877;
+}
+
+.tudigit-viewer-logo {
+	display: inline-block;
+	margin: 15px 0 0 30px;
+
+	@media only screen and (max-width: 700px) {
+		margin: 15px 0 0 15px;
+	}
+}
+
+.tudigit-viewer-logo img {
+	width: 160px;
+	height: auto;
+
+	@media only screen and (max-width: 700px) {
+		width: 120px;
+	}
+}
+
+
+.control-bar .header-bar nav .nav-toggle .nav-button-bar {
+	background: #008877;
+}
+
+.control-bar .header-bar nav .viewer-nav li a {
+	background: #008877;
+}
+
+.control-bar .language-nav li a {
+	background: #00554A;
+	margin: 1px 10px;
+}
+
+.control-bar .language-nav li a.actlang,
+.control-bar .header-bar nav .language-nav::before {
+	display: none !important;
+}
+
+.mobile-meta a {
+	color: #008877;
+}
+
+.control-bar .metadata-wrapper .offcanvas-toggle,
+.control-bar .toc-wrapper .offcanvas-toggle {
+	background-color: #008877;
+}
+
+@media screen and (min-width: 1024px) {
+
+    .main-wrapper {
+        top: 0px;
+        right: 0px;
+        bottom: 0px;
+        left: 0px;
+    }
+
+  	.document-view {
+		right: 25%;
+    	left: 0;
+  	}
+
+	.control-bar {
+		right: 0;
+    	left: auto;
+  	}
+ 
+	 .control-bar .header-bar {
+		min-height: 70px;
+	}
+ 
+	.control-bar .header-bar nav .viewer-nav {
+		background-color: #008877;
+	}
+ 
+  	.control-bar .header-bar nav .nav-toggle:hover {
+		cursor: pointer;
+	}
+ 
+ 	.control-bar .header-bar nav .viewer-nav.open {
+		right: 70px;
+	}
+	
+	 .control-bar .header-bar nav .viewer-nav::before {
+		right: -10px;
+	 	left: auto;
+	    border-left-width: 10px;
+	    border-right-width: 0;
+	    border-left-color: #1A1919;
+	}
+
+	.control-bar .control-bar-content {
+	    inset: 70px 0 0 0;
+	}
+	
+	.control-bar .metadata-wrapper {
+		padding: 0 30px 30px 30px;
+	}
+
+	.control-bar .metadata-wrapper h3 span.sidebar-heading-state,
+	.control-bar .toc-wrapper h3 span.sidebar-heading-state {
+        background-color: #008877;
+    }
+
+	.view-functions ul li.pages form select {
+    	color: #008877;
+   }
+}
