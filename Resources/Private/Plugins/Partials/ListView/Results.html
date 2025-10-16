@@ -79,9 +79,9 @@
                             </span>
                         </div>
                     </article>
-    
+
                     <f:render partial="Basket/AddToBasket" arguments="{result: document}" />
-    
+
                     <f:if condition="{document.children} || {document.searchResults}">
                         <div class="show-volumes" style="">
                             <a href="" class="show-volumes-minimize">Details</a>
@@ -139,21 +139,21 @@
                                             </dd>
                                             </dl>
                                         </f:link.page>
-    
+
                                         <f:render partial="Basket/AddToBasket" arguments="{result: child}" />
-    
+
                                     </li>
                                 </f:else>
                                 </f:if>
                             </f:for>
                         </ol>
                     </f:if>
-    
+
                     <f:if condition="{document.searchResults}">
                         <ol class="tx-dlf-volume">
                             <f:for each="{document.searchResults}" as="result" iteration="resultIterator">
                                 <li value="{resultIterator.cycle}" class="pageresult">
-    
+
                                     <div class="tx-dlf-listview-thumbnail">
                                         <f:if condition="{result.thumbnail}">
                                             <img src="{result.thumbnail}" alt="Vorschaubild von {f:if(condition:'{result.title}', then:'{result.title}', else:'[{document.title}]')}" loading="lazy"/>
@@ -210,10 +210,10 @@
                                             <p class="textsnippet">[...] <f:format.raw>{result.snippet}</f:format.raw> [...]</p>
                                         </f:if>
                                     </div>
-    
-    
+
+
                                     <f:render partial="Basket/AddToBasket" arguments="{result: {uid:document.uid, page: result.page}}" />
-    
+
                                 </li>
                             </f:for>
                         </ol>

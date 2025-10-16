@@ -43,7 +43,11 @@
                     </f:case>
                     <f:defaultCase>
                         <li class="{f:if(condition: '{page.label} == {paginator.currentPageNumber}', then:'current')}">
+<<<<<<< HEAD
                             {page.label}
+=======
+                            <f:link.action action="{action}" addQueryString="true" argumentsToBeExcludedFromQueryString="{0: 'tx_dlf[page]'}" additionalParams="{'tx_dlf[page]': page.startRecordNumber}" arguments="{searchParameter: lastSearch}">{page.label}</f:link.action>
+>>>>>>> 9f6c11bf9792c3866520c12bd04c5bb51c4576c7
                         </li>
                     </f:defaultCase>
                 </f:switch>

@@ -128,7 +128,7 @@ $(".tx-dlf-metadata .show-metadata").on("click", function (evt) {
             $(".tx-dlf-metadata dd.tx-dlf-metadata-title")
                 .text()
                 .substring(0, 70) + " ..."
-            );
+        );
     }
 
 });
@@ -248,46 +248,46 @@ $(document).ready(function() {
     linkButtonToPdfGeneration();
     linkButtonToZipGeneration();
     pageGridToggle();
-    // AVI 20230803 for copy PURL (directlink) into User-buffer 
+    // AVI 20230803 for copy PURL (directlink) into User-buffer
     copyDirectlink2Buffer();
 });
 
 
 function copyDirectlink2Buffer() {
-	//AVI 20230803 for copy PURL (directlink) into User-buffer 
+    //AVI 20230803 for copy PURL (directlink) into User-buffer
     $('.copyDirectLink2Buffer').on("click", function (event) {
         event.preventDefault();
-	// Text, der kopiert werden soll  
-	    // erst Wunsch: purl
-	 var text = $('#purl-link a').attr('href');
-	    // zweite Wunsch: diese konkrete Seite
-	 var myUrl = new URL(window.location.toLocaleString());
-	 var myUrlParams = new URLSearchParams(myUrl.search);
-	 var myPageNr = " ";
-	 if( myUrlParams.has("tx_dlf[page]")){
-		 myPageNr = myUrlParams.get("tx_dlf[page]");
-	 }
+        // Text, der kopiert werden soll
+        // erst Wunsch: purl
+        var text = $('#purl-link a').attr('href');
+        // zweite Wunsch: diese konkrete Seite
+        var myUrl = new URL(window.location.toLocaleString());
+        var myUrlParams = new URLSearchParams(myUrl.search);
+        var myPageNr = " ";
+        if( myUrlParams.has("tx_dlf[page]")){
+            myPageNr = myUrlParams.get("tx_dlf[page]");
+        }
 
 
         // Erstelle ein unsichtbares Textfeld
         var textfeld = document.createElement('textarea');
         document.body.appendChild(textfeld);
-	// baue URL aus PURL und SeitenNummer
+        // baue URL aus PURL und SeitenNummer
         textfeld.innerHTML = text + '/' + myPageNr;
 
         // Kopiere den Text aus dem Textfeld
         textfeld.select();
         textfeld.setSelectionRange(0, 99999); // For mobile devices
-	// erste Versuch, funktioniert nicht auf Chrome-iOS 
+        // erste Versuch, funktioniert nicht auf Chrome-iOS
         //navigator.clipboard.writeText(textfeld.innerHTML);
-	document.execCommand("copy");
+        document.execCommand("copy");
 
 
         // Entferne das Textfeld
         document.body.removeChild(textfeld);
 
         // Bestätigungsmeldung ausgeben
-       alert("Referenz '" + textfeld.value + "' kopiert");
+        alert("Referenz '" + textfeld.value + "' kopiert");
     });
 
 }
@@ -302,10 +302,10 @@ function shortenDescription() {
     //     shortenText($(this));
     // });
     $('.tx-dlf-collection-description').each(function() {
-       shortenText($(this));
+        shortenText($(this));
     });
     $('.tx-dlf-collection-description-list').each(function() {
-       shortenListText($(this));
+        shortenListText($(this));
     });
     showMoreClickHandler();
 }
@@ -336,7 +336,7 @@ function shortenListText(element) {
     if ($(element).text().trim().length > 100) {
         $(element).text($(element).text().substr(0,97) + "...") ;
     }
-    
+
 }
 
 function initialFacetValueRestriction() {
@@ -434,7 +434,7 @@ function linkButtonToPdfGeneration() {
 
 function pageGridToggle() {
     $('#pagegrid-button').on('click', function (evt) {
-       evt.preventDefault();
-       $('.fullsize-pagegrid').toggle();
+        evt.preventDefault();
+        $('.fullsize-pagegrid').toggle();
     });
 }
