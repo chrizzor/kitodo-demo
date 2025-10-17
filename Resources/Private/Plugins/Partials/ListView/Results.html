@@ -27,8 +27,14 @@
                 </article>
                 <article class="shlb-listview-text">
                     <h2>
+                        <f:variable name="targetPage" value="{settings.targetPidPageView}" />
+                        <f:if condition="({document.structure} == 'year' || {document.structure} == 'newspaper')">
+                            <f:then>
+                                <f:variable name="targetPage" value="9" />
+                            </f:then>
+                        </f:if>
                         <f:link.page
-                                pageUid="{settings.targetPidPageView}"
+                                pageUid="{targetPage}"
                                 additionalParams="{tx_dlf:{page:'{document.page}', double:'0', id:'{document.uid}', pagegrid:'0'}}"
                                 class=""
                                 title="{docTitle}">
