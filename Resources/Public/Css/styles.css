@@ -1301,7 +1301,6 @@ detail-view
 
 .ol-unselectable.ol-layers {
     overflow: hidden;
-    width: 75% !important;
 }
 
 /*----------------------------------------------------------------------
