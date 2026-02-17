@@ -2692,6 +2692,10 @@ span.fullPdfDownloadSpan img {
     display: block;
 }
 
+.tx-dlf-metadata li {
+    list-style: none;
+}
+
 .multivalued {
     display: block
 }
