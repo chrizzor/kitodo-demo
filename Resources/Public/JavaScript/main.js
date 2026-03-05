@@ -250,7 +250,24 @@ $(document).ready(function() {
     pageGridToggle();
     // AVI 20230803 for copy PURL (directlink) into User-buffer
     copyDirectlink2Buffer();
+    imageViewerSizeAdjustment();
 });
+
+function imageViewerSizeAdjustment() {
+    if (tx_dlf_viewer) {
+        tx_dlf_viewer.map
+            .getView()
+            .fit(
+                tx_dlf_viewer.map
+                    .getLayers()
+                    .getArray()
+                    .find(layer => layer instanceof ol.layer.Image)
+                    .getSource()
+                    .getImageExtent()
+                , {size: tx_dlf_viewer.map.getSize()}
+            );
+    }
+}
 
 
 function copyDirectlink2Buffer() {
