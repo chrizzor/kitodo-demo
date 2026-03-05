@@ -258,7 +258,7 @@ function imageViewerSizeAdjustment() {
     const delay = 500; // 500ms delay
 
     function checkAndAdjust() {
-        if (tx_dlf_viewer) {
+        if (typeof tx_dlf_viewer != 'undefined') {
             tx_dlf_viewer.map
                 .getView()
                 .fit(
