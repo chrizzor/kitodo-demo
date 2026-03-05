@@ -2374,6 +2374,10 @@ ul.tx-dlf-toolbox span a img {
     padding: 5px 5px;
 }
 
+.control-bar .section-hidden .tx-dlf-toc.tx-dlf-window.tx-dlf-leftwin.tx-dlf-open {
+    height: 0px !important;
+}
+
 .tx-dlf-toc .dropdown-menu input[type=checkbox]:checked ~ ul ul {
     padding-left: 25px
 }
