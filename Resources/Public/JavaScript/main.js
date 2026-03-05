@@ -254,7 +254,7 @@ $(document).ready(function() {
 
 function imageViewerSizeAdjustment() {
     let attempts = 0;
-    const maxAttempts = 3;
+    const maxAttempts = 10;
     const delay = 500; // 500ms delay
 
     function checkAndAdjust() {
