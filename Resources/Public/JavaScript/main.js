@@ -1,4 +1,3 @@
-
 $('.tx-dlf-basket-button a').text("merken");
 $('.add-to-cart a').text("merken");
 $('#submitBasketForm').text("merken");
@@ -254,19 +253,34 @@ $(document).ready(function() {
 });
 
 function imageViewerSizeAdjustment() {
-    if (tx_dlf_viewer) {
-        tx_dlf_viewer.map
-            .getView()
-            .fit(
-                tx_dlf_viewer.map
-                    .getLayers()
-                    .getArray()
-                    .find(layer => layer instanceof ol.layer.Image)
-                    .getSource()
-                    .getImageExtent()
-                , {size: tx_dlf_viewer.map.getSize()}
-            );
+    let attempts = 0;
+    const maxAttempts = 3;
+    const delay = 500; // 500ms delay
+
+    function checkAndAdjust() {
+        if (tx_dlf_viewer) {
+            tx_dlf_viewer.map
+                .getView()
+                .fit(
+                    tx_dlf_viewer.map
+                        .getLayers()
+                        .getArray()
+                        .find(layer => layer instanceof ol.layer.Image)
+                        .getSource()
+                        .getImageExtent()
+                    , {size: tx_dlf_viewer.map.getSize()}
+                );
+        } else {
+            attempts++;
+            if (attempts < maxAttempts) {
+                setTimeout(checkAndAdjust, delay);
+            } else {
+                console.warn('tx_dlf_viewer adjustment failed after ' + maxAttempts + ' attempts.');
+            }
+        }
     }
+
+    checkAndAdjust();
 }
 
 
