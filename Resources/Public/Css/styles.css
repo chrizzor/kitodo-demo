@@ -2378,9 +2378,12 @@ ul.tx-dlf-toolbox span a img {
     height: 0px !important;
 }
 
-.control-bar .metadata-wrapper h3,
-.control-bar .toc-wrapper h3 {
+.control-bar .metadata-wrapper h3 {
     margin-top: 0px !important;
+}
+
+.control-bar .toc-wrapper h3 {
+    margin-top: 20px !important;
 }
 
 .control-bar .metadata-wrapper,
