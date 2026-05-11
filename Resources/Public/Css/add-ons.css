@@ -68,6 +68,10 @@ h1, h2, h3, h4, h5, h6 {
 	background-color: #008877;
 }
 
+.control-bar .section-hidden h3 {
+    opacity: 1 !important;
+}
+
 @media screen and (min-width: 1024px) {
 
     .main-wrapper {
